@@ -483,7 +483,8 @@ class ScriptTransformer {
     content: string,
     options: ReducedTransformOptions,
   ): TransformResult {
-    const filename = tryRealpath(filepath);
+    // const filename = tryRealpath(filepath);
+    const filename = filepath;
     const {transformer, transformerConfig = {}} =
       this._getTransformer(filename) ?? {};
     const cacheFilePath = this._getFileCachePath(filename, content, options);
